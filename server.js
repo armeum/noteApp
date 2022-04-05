@@ -117,5 +117,5 @@ app.post("/edit/:id", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Hello world", port);
+  console.log("Hello world", PORT);
 });
