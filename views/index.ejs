@@ -1,0 +1,130 @@
+<%- include('header') %>
+<div>
+  <!-- <button type="button" class="btn btn-outline-dark rounded-circle btn-lg ml-5" style="background-color: rgba(39, 34, 34, 0.822); border: 2px ;">✏️</button> -->
+</div>
+<div class="container-fluid mt-5  ">
+  <div class="row ">
+    <% for(let i = 0; i < anyNote.length; i++) {%>
+      <div class="col-sm-3">
+        <div class="card m-3 border-danger mb-3">
+          <div class="card-header bg-danger bg-gradient" style="color: floralwhite;">My note</div>
+          <div class="card-body">
+            <h5 class="card-title"><%= anyNote[i]['title'] %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p class="card-text">
+              <%= anyNote[i]['body'] %>
+            </p>
+            
+            <div class="d-flex justify-content-around ">
+              <form class="m-3" action="/edit" >
+                <a href="/edit/<%= anyNote[i]['_id'] %>" class="card-link btn btn-primary " style="width: 100px;">Edit</a>
+              </form>
+              <form class="m-3" action="/delete" >
+                <a href="/delete/<%= anyNote[i]['_id'] %>" class="card-link btn btn-danger" style="width: 100px;">Delete</a>
+              </form>
+            </div>
+            
+          </div>
+          <div class="card-footer">
+            <small id="test" class="text-muted">Anynote📝</small>
+          </div>
+        </div>
+  </div>
+
+    <% } %>
+
+
+    <!-- <div class="col-sm-3">
+      <div class="card m-3 border-danger mb-3">
+        <div class="card-header bg-danger bg-gradient" style="color: floralwhite;">My note</div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          
+          <div class="d-flex justify-content-around ">
+            <form class="m-3" action="/edit">
+              <a href="#" class="card-link btn btn-primary " style="width: 100px;">Edit</a>
+            </form>
+
+            <form class="m-3" action="/delete" >
+              <a href="#" class="card-link btn btn-danger" style="width: 100px;">Delete</a>
+            </form>
+          </div>
+          
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card m-3 border-danger mb-3">
+        <div class="card-header bg-danger bg-gradient" style="color: floralwhite;">My note</div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          
+          <div class="d-flex justify-content-around ">
+            <form class="m-3" action="/edit">
+              <a href="#" class="card-link btn btn-primary " style="width: 100px;">Edit</a>
+            </form>
+
+            <form class="m-3" action="/delete" >
+              <a href="#" class="card-link btn btn-danger" style="width: 100px;">Delete</a>
+            </form>
+          </div>
+          
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card m-3 border-danger mb-3">
+        <div class="card-header bg-danger bg-gradient" style="color: floralwhite;">My note</div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          
+          <div class="d-flex justify-content-around ">
+            <form class="m-3" action="/edit">
+              <a href="#" class="card-link btn btn-primary " style="width: 100px;">Edit</a>
+            </form>
+
+            <form class="m-3" action="/delete" >
+              <a href="#" class="card-link btn btn-danger" style="width: 100px;">Delete</a>
+            </form>
+          </div>
+          
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div> -->
+
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<%- include('footer') %>
