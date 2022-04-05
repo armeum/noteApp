@@ -15,5 +15,5 @@ localhost:5000
 Application dependencies’ list Express Ejs Nodemon Dotenv Mongoose Body-parser
 
 ## Links
-github link: https://github.com/MunisaR/notes_webApp.git 
+github link: https://github.com/MunisaR/noteApp.git
 heroku link:https://munisanodejs.herokuapp.com/
